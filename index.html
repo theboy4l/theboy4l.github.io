@@ -50,6 +50,9 @@
     .project a{margin-top:18px;color:var(--link);font-size:.9rem;white-space:nowrap}
     .project a:hover{text-decoration:underline}
     .about{max-width:640px;margin:0;color:#424245;font-size:1.05rem}
+    .scroll-reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+    .scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+    .project:nth-child(2){transition-delay:70ms}.project:nth-child(3){transition-delay:140ms}
     footer{display:flex;justify-content:space-between;gap:20px;padding:22px 0 32px;border-top:1px solid var(--rule);color:var(--soft);font-size:.84rem}
     footer a{color:var(--link)}
     @media(max-width:1000px){.hero-art{right:-24px;top:20px;width:240px;opacity:.38}.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -88,5 +91,18 @@
     </section>
     <footer><span>Munyaradzi Mereki · 2026</span><a href="https://github.com/theboy4l">GitHub profile ↗</a></footer>
   </div>
+  <script>
+    (() => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+      const items = document.querySelectorAll('#projects .section-title, #projects .section-note, .project, #about h2, #about .about');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
+      }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+      items.forEach(item => {
+        item.classList.add('scroll-reveal');
+        observer.observe(item);
+      });
+    })();
+  </script>
 </body>
 </html>
