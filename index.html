@@ -3,97 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f5f7">
-  <title>Munyaradzi Mereki — HIT Computer Science &amp; Python</title>
-  <meta name="description" content="Munyaradzi Mereki is a first-year Computer Science student at Harare Institute of Technology (HIT) and a Python developer. See his projects and CS50 coursework.">
+  <meta name="theme-color" content="#f4f0e7">
+  <title>Munyaradzi Mereki — Computer Science at HIT</title>
+  <meta name="description" content="Munyaradzi Mereki is a first-year Computer Science student at Harare Institute of Technology. A few notes from learning Python and building for the web.">
   <meta name="author" content="Munyaradzi Mereki">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://theboy4l.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Munyaradzi Mereki — HIT Computer Science &amp; Python">
-  <meta property="og:description" content="A first-year Computer Science student at Harare Institute of Technology, learning through Python and web projects.">
+  <meta property="og:title" content="Munyaradzi Mereki — Computer Science at HIT">
+  <meta property="og:description" content="A first-year Computer Science student at Harare Institute of Technology, learning by making things.">
   <meta property="og:url" content="https://theboy4l.github.io/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Munyaradzi Mereki","url":"https://theboy4l.github.io/","sameAs":["https://github.com/theboy4l"],"jobTitle":"First-year Computer Science Student and Python Developer","affiliation":{"@type":"CollegeOrUniversity","name":"Harare Institute of Technology"},"knowsAbout":["Python","Computer Science","Software Engineering"]}
+    {"@context":"https://schema.org","@type":"Person","name":"Munyaradzi Mereki","url":"https://theboy4l.github.io/","sameAs":["https://github.com/theboy4l"],"jobTitle":"First-year Computer Science Student","affiliation":{"@type":"CollegeOrUniversity","name":"Harare Institute of Technology"},"knowsAbout":["Python","Computer Science","Web Development"]}
   </script>
   <style>
-    :root{color-scheme:light;--paper:#f5f5f7;--ink:#1d1d1f;--soft:#6e6e73;--rule:#d2d2d7;--link:#06c}
+    :root{color-scheme:light;--paper:#f4f0e7;--ink:#22251f;--muted:#686a60;--line:#d9d4c8;--orange:#dc5a32;--green:#44634c;--blue:#576e84}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    body{margin:0;background-color:var(--paper);background-image:radial-gradient(#a6a08f 0.65px,transparent 0.65px);background-size:17px 17px;color:var(--ink);font:16px/1.55 "Avenir Next",Avenir,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}
-    a:hover{color:var(--link)}
-    .wrap{width:min(920px,calc(100% - 48px));margin:auto}
-    header{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule)}
-    .brand{font-size:.95rem;font-weight:600;letter-spacing:-.02em}
-    nav{display:flex;gap:28px;font-size:.88rem;color:var(--soft)}
-    main{position:relative;isolation:isolate;padding:112px 0 92px;background:radial-gradient(ellipse 410px 300px at 88% 40%,rgba(185,177,255,.20),transparent 72%),radial-gradient(ellipse 360px 260px at 97% 56%,rgba(126,231,236,.16),transparent 72%)}
-    .hero-art{position:absolute;z-index:-1;top:14px;right:-205px;width:clamp(230px,34vw,360px);aspect-ratio:1;pointer-events:none;opacity:.76}
-    .hero-art::before{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.88);border-radius:48% 52% 43% 57% / 51% 44% 56% 49%;transform:rotate(-12deg);background:radial-gradient(ellipse at 70% 76%,#6953d2 0 7%,transparent 48%),radial-gradient(ellipse at 27% 34%,#82eeeb 0 5%,transparent 31%),radial-gradient(ellipse at 49% 45%,#fff 0 2%,#f0e7ff 13%,#c6b4ff 30%,#f59acb 50%,#80dfe9 69%,#7785dc 86%);box-shadow:inset -20px -24px 40px rgba(45,39,121,.18),inset 12px 10px 22px rgba(255,255,255,.72),0 28px 65px rgba(114,92,205,.16)}
-    .hero-art::after{content:"";position:absolute;top:17%;left:24%;width:22%;height:10%;border-radius:50%;transform:rotate(-55deg);background:rgba(255,255,255,.68);filter:blur(12px)}
-    .kicker{margin:0 0 22px;color:var(--soft);font-size:.9rem}
-    h1{max-width:790px;margin:0;font-size:clamp(3.4rem,9vw,6.5rem);font-weight:600;line-height:.99;letter-spacing:-.075em}
-    h1 span{display:block;color:var(--soft);font-weight:400}
-    .intro{max-width:530px;margin:30px 0 0;color:#424245;font-size:1.2rem;line-height:1.5;letter-spacing:-.015em}
-    .hero-link{display:inline-flex;align-items:center;gap:7px;margin-top:25px;color:var(--link);font-size:.98rem}
-    .hero-link:hover{text-decoration:underline}
-    section{padding:34px 0 70px}
-    .section-title{margin:0 0 12px;font-size:1.7rem;font-weight:600;letter-spacing:-.045em}
-    .section-note{margin:0 0 24px;color:var(--soft);font-size:.95rem}
-    .project{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:start;padding:21px 0;border-top:1px solid var(--rule)}
-    .number{padding-top:3px;color:var(--soft);font-size:.85rem;font-variant-numeric:tabular-nums}
-    .project h3{margin:0;font-size:1.08rem;font-weight:600;letter-spacing:-.02em}
-    .project p{max-width:570px;margin:5px 0 0;color:var(--soft);font-size:.94rem}
-    .project a{padding-top:3px;color:var(--link);font-size:.9rem;white-space:nowrap}
-    .about{max-width:640px;margin:0;color:#424245;font-size:1.05rem}
-    footer{display:flex;justify-content:space-between;gap:20px;padding:22px 0 32px;border-top:1px solid var(--rule);color:var(--soft);font-size:.84rem}
-    footer a{color:var(--link)}
-    @media(max-width:1000px){.hero-art{right:-24px;top:20px;width:240px;opacity:.38}}
-    @media(max-width:620px){.wrap{width:min(100% - 36px,920px)}header{height:62px}nav{gap:17px;font-size:.82rem}main{padding:76px 0 66px}.hero-art{top:-10px;right:-40px;width:170px;opacity:.28}h1{font-size:clamp(3.1rem,15vw,5rem)}.intro{font-size:1.08rem}.project{grid-template-columns:30px minmax(0,1fr);gap:8px}.project a{grid-column:2;padding-top:4px}footer{flex-direction:column;gap:5px}}
+    a:hover{color:var(--orange)}
+    .wrap{width:min(1040px,calc(100% - 52px));margin:auto}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-size:.98rem;font-weight:700;letter-spacing:-.035em}
+    .brand-mark{display:inline-block;width:10px;height:10px;margin-right:8px;background:var(--orange);border-radius:50%}
+    nav{display:flex;gap:30px;color:var(--muted);font-size:.9rem}
+    main{position:relative;min-height:550px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:18px;padding:72px 0 66px}
+    .hero-copy{position:relative;z-index:1}
+    .eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 26px;color:var(--green);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:27px;height:2px;background:var(--green)}
+    h1{max-width:590px;margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.5rem,7.5vw,6.8rem);font-weight:400;line-height:.94;letter-spacing:-.065em}
+    h1 em{color:var(--orange);font-weight:400}
+    .intro{max-width:455px;margin:25px 0 0;color:#55574f;font-size:1.08rem;line-height:1.7}
+    .jump{display:inline-flex;align-items:center;gap:12px;margin-top:28px;padding:12px 17px;border:1px solid var(--ink);border-radius:3px;font-size:.9rem;font-weight:650}
+    .jump span{color:var(--orange);font-size:1.15rem}
+    .hero-visual{position:relative;min-height:400px;display:grid;place-items:center}
+    .orbit{position:relative;width:min(370px,78vw);aspect-ratio:1;border:1px solid #aaa493;border-radius:50%;transform:rotate(-17deg)}
+    .orbit::before,.orbit::after{content:"";position:absolute;border:1px solid #aaa493;border-radius:50%}
+    .orbit::before{inset:14% -9%;transform:rotate(46deg)}
+    .orbit::after{inset:-7% 19%;transform:rotate(-48deg)}
+    .sun{position:absolute;inset:27%;border-radius:50%;background:radial-gradient(circle at 36% 32%,#f3bc7c 0 8%,#e88b52 9% 30%,#d85a36 72%);box-shadow:inset -18px -18px 35px #9d432f55,0 18px 36px #9b593344}
+    .satellite{position:absolute;top:13%;right:6%;width:39px;height:39px;border-radius:50%;background:#526d59;border:7px solid var(--paper);box-shadow:0 0 0 1px #526d59}
+    .visual-label{position:absolute;right:0;bottom:4%;padding:9px 12px;background:var(--paper);border:1px solid var(--line);font-family:Georgia,serif;font-size:.95rem;font-style:italic;transform:rotate(3deg)}
+    .side-note{position:absolute;left:2%;top:6%;width:115px;color:var(--muted);font-size:.73rem;line-height:1.4;transform:rotate(-8deg)}
+    .side-note strong{display:block;margin-bottom:4px;color:var(--orange);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:10px 0 25px}
+    .section-head h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:2.5rem;font-weight:400;letter-spacing:-.045em}
+    .section-head p{margin:0 0 5px;color:var(--muted);font-size:.86rem}
+    #projects{padding:28px 0 76px}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .project{position:relative;min-height:270px;display:flex;flex-direction:column;padding:20px 19px 18px;background:#fbf9f3;border:1px solid var(--line);box-shadow:3px 4px 0 #ded8ca;transition:transform .18s ease,box-shadow .18s ease}
+    .project:hover{transform:translateY(-4px) rotate(-.3deg);box-shadow:5px 9px 0 #ded8ca}
+    .project:nth-child(2){background:#f3f3e9}
+    .project:nth-child(3){background:#edf0ec}
+    .project-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-family:Georgia,serif;font-size:.82rem}
+    .tag{padding:4px 8px;border:1px solid var(--line);border-radius:99px;font-family:"Avenir Next",Avenir,"Segoe UI",sans-serif;font-size:.66rem;letter-spacing:.04em}
+    .project h3{margin:auto 0 8px;padding-top:32px;font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;font-weight:400;line-height:1.1;letter-spacing:-.035em}
+    .project p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.6}
+    .project-link{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-size:.82rem;font-weight:650}
+    .project-link span{color:var(--orange);font-size:1.05rem}
+    #about{display:grid;grid-template-columns:.7fr 1.3fr;gap:36px;padding:30px 0 80px;border-top:1px solid var(--line)}
+    #about h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:2.5rem;font-weight:400;letter-spacing:-.045em}
+    .about-copy{max-width:610px;margin:6px 0 0;color:#55574f;font-size:1.04rem;line-height:1.75}
+    .about-copy strong{color:var(--ink)}
+    footer{display:flex;justify-content:space-between;gap:20px;padding:20px 0 30px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    footer a{color:var(--ink);font-weight:650}
+    @media(max-width:760px){.wrap{width:min(100% - 38px,600px)}header{height:70px}nav{gap:17px;font-size:.82rem}main{grid-template-columns:1fr;gap:0;padding:63px 0 35px}.hero-visual{min-height:300px;margin-top:20px}.orbit{width:min(280px,72vw)}.side-note{left:4%;top:1%}.visual-label{right:5%;bottom:1%}.projects{grid-template-columns:1fr}.project{min-height:225px}.project h3{padding-top:24px}#about{grid-template-columns:1fr;gap:8px}}
+    @media(max-width:420px){.brand{font-size:.86rem}nav{gap:12px;font-size:.77rem}h1{font-size:3.65rem}.section-head{align-items:start;flex-direction:column;gap:4px}footer{flex-direction:column;gap:5px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project{transition:none}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="#top">Munyaradzi Mereki</a>
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="https://github.com/theboy4l">GitHub</a>
-      </nav>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Munyaradzi Mereki</a>
+      <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#about">About</a><a href="https://github.com/theboy4l">GitHub</a></nav>
     </header>
     <main id="top">
-      <div class="hero-art" aria-hidden="true"></div>
-      <p class="kicker">First-year Computer Science student at Harare Institute of Technology (HIT)</p>
-      <h1>Munyaradzi Mereki<span>Learning by building.</span></h1>
-      <p class="intro">I’m studying computer science at HIT and working through projects in Python and web development. Here are a few things I’ve made along the way.</p>
-      <a class="hero-link" href="#projects">See my projects <span aria-hidden="true">↓</span></a>
+      <div class="hero-copy">
+        <p class="eyebrow">First year · HIT · Harare</p>
+        <h1>Curious by nature.<br><em>Building as I go.</em></h1>
+        <p class="intro">I’m Munyaradzi, a first-year Computer Science student at Harare Institute of Technology. These are a few things I’ve been figuring out, one project at a time.</p>
+        <a class="jump" href="#projects">A few things I’ve made <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-visual" aria-label="An abstract orbit illustration inspired by curiosity and learning">
+        <div class="side-note"><strong>Field note 01</strong>Keep asking<br>how it works.</div>
+        <div class="orbit"><div class="sun"></div><div class="satellite"></div></div>
+        <div class="visual-label">Small steps, real things.</div>
+      </div>
     </main>
     <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-note">A small selection from my GitHub.</p>
-      <article class="project">
-        <span class="number">01</span>
-        <div><h3>Visa Day Calculator</h3><p>A tool for tracking visits and counting days in a country over a rolling 365-day period.</p></div>
-        <a href="https://github.com/theboy4l/visa-day-calculator-">View project ↗</a>
-      </article>
-      <article class="project">
-        <span class="number">02</span>
-        <div><h3>CS50W Learning Journal</h3><p>Notes and reflections from working through Harvard’s web programming course.</p></div>
-        <a href="https://github.com/theboy4l/cs50w-learning-journal">Read journal ↗</a>
-      </article>
-      <article class="project">
-        <span class="number">03</span>
-        <div><h3>CS50P</h3><p>My exercises and projects from Harvard’s Introduction to Programming with Python.</p></div>
-        <a href="https://github.com/theboy4l/CS50P">View coursework ↗</a>
-      </article>
+      <div class="section-head"><h2>On the desk</h2><p>Projects &amp; coursework, still in progress.</p></div>
+      <div class="projects">
+        <article class="project"><div class="project-meta"><span>01 / A useful tool</span><span class="tag">Python</span></div><h3>Visa Day Calculator</h3><p>A small tool for tracking visits and counting days across a rolling 365-day period.</p><a class="project-link" href="https://github.com/theboy4l/visa-day-calculator-">See the project <span aria-hidden="true">↗</span></a></article>
+        <article class="project"><div class="project-meta"><span>02 / Learning notes</span><span class="tag">Web</span></div><h3>CS50W Journal</h3><p>Notes and reflections while working through Harvard’s web programming course.</p><a class="project-link" href="https://github.com/theboy4l/cs50w-learning-journal">Read the journal <span aria-hidden="true">↗</span></a></article>
+        <article class="project"><div class="project-meta"><span>03 / Course work</span><span class="tag">CS50P</span></div><h3>Python, from the ground up</h3><p>Exercises and projects from Harvard’s Introduction to Programming with Python.</p><a class="project-link" href="https://github.com/theboy4l/CS50P">Browse the work <span aria-hidden="true">↗</span></a></article>
+      </div>
     </section>
     <section id="about">
-      <h2 class="section-title">About</h2>
-      <p class="about">I’m a first-year Computer Science student at Harare Institute of Technology and a CS50P graduate. I like learning by making small projects, understanding how they work, and improving them as I go.</p>
+      <h2>A little about me</h2>
+      <p class="about-copy"><strong>I’m a first-year Computer Science student at HIT</strong> and a CS50P graduate. I enjoy the part where an idea is still a bit fuzzy, then slowly becomes something that works. Right now, that means learning Python and exploring web development.</p>
     </section>
-    <footer><span>Munyaradzi Mereki · 2026</span><a href="https://github.com/theboy4l">GitHub profile ↗</a></footer>
+    <footer><span>Munyaradzi Mereki · Harare, Zimbabwe</span><a href="https://github.com/theboy4l">Find me on GitHub ↗</a></footer>
   </div>
 </body>
 </html>
