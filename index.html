@@ -1,109 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f5f7">
-  <title>Munyaradzi Mereki — HIT Computer Science &amp; Python</title>
-  <meta name="description" content="Munyaradzi Mereki is a first-year Computer Science student at Harare Institute of Technology (HIT) and a Python developer. See his projects and CS50 coursework.">
-  <meta name="author" content="Munyaradzi Mereki">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="JPL418eJ8g0BPI_V09Ilth5LzDoifdlogWLV9IkgYe0">
-  <link rel="canonical" href="https://theboy4l.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Munyaradzi Mereki — HIT Computer Science &amp; Python">
-  <meta property="og:description" content="A first-year Computer Science student at Harare Institute of Technology, learning through Python and web projects.">
-  <meta property="og:url" content="https://theboy4l.github.io/">
-  <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Munyaradzi Mereki","url":"https://theboy4l.github.io/","sameAs":["https://github.com/theboy4l"],"jobTitle":"First-year Computer Science Student and Python Developer","affiliation":{"@type":"CollegeOrUniversity","name":"Harare Institute of Technology"},"knowsAbout":["Python","Computer Science","Software Engineering"]}
-  </script>
-  <style>
-    :root{color-scheme:light;--paper:#f5f5f7;--ink:#1d1d1f;--soft:#6e6e73;--rule:#d2d2d7;--link:#06c}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    a:hover{color:var(--link)}
-    .wrap{width:min(920px,calc(100% - 48px));margin:auto}
-    header{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule)}
-    .brand{font-size:.95rem;font-weight:600;letter-spacing:-.02em}
-    nav{display:flex;gap:28px;font-size:.88rem;color:var(--soft)}
-    main{position:relative;isolation:isolate;padding:112px 0 92px;background:radial-gradient(ellipse 410px 300px at 88% 40%,rgba(185,177,255,.20),transparent 72%),radial-gradient(ellipse 360px 260px at 97% 56%,rgba(126,231,236,.16),transparent 72%)}
-    .hero-art{position:absolute;z-index:-1;top:14px;right:-205px;width:clamp(230px,34vw,360px);aspect-ratio:1;pointer-events:none;opacity:.76}
-    .hero-art::before{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.88);border-radius:48% 52% 43% 57% / 51% 44% 56% 49%;transform:rotate(-12deg);background:radial-gradient(ellipse at 70% 76%,#6953d2 0 7%,transparent 48%),radial-gradient(ellipse at 27% 34%,#82eeeb 0 5%,transparent 31%),radial-gradient(ellipse at 49% 45%,#fff 0 2%,#f0e7ff 13%,#c6b4ff 30%,#f59acb 50%,#80dfe9 69%,#7785dc 86%);box-shadow:inset -20px -24px 40px rgba(45,39,121,.18),inset 12px 10px 22px rgba(255,255,255,.72),0 28px 65px rgba(114,92,205,.16)}
-    .hero-art::after{content:"";position:absolute;top:17%;left:24%;width:22%;height:10%;border-radius:50%;transform:rotate(-55deg);background:rgba(255,255,255,.68);filter:blur(12px)}
-    .kicker{margin:0 0 22px;color:var(--soft);font-size:.9rem}
-    h1{max-width:790px;margin:0;font-size:clamp(3.4rem,9vw,6.5rem);font-weight:600;line-height:.99;letter-spacing:-.075em}
-    h1 span{display:block;color:var(--soft);font-weight:400}
-    .intro{max-width:530px;margin:30px 0 0;color:#424245;font-size:1.2rem;line-height:1.5;letter-spacing:-.015em}
-    .hero-link{display:inline-flex;align-items:center;gap:7px;margin-top:25px;color:var(--link);font-size:.98rem}
-    .hero-link:hover{text-decoration:underline}
-    section{padding:34px 0 70px}
-    .section-title{margin:0 0 12px;font-size:1.7rem;font-weight:600;letter-spacing:-.045em}
-    .section-note{margin:0 0 24px;color:var(--soft);font-size:.95rem}
-    .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .project{min-height:240px;display:flex;flex-direction:column;padding:24px;background:#fff;border:1px solid #e6e6e8;border-radius:20px;box-shadow:0 4px 18px rgba(0,0,0,.045);transition:transform .18s ease,box-shadow .18s ease}
-    .project:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.08)}
-    .number{color:var(--soft);font-size:.82rem;font-variant-numeric:tabular-nums}
-    .project h3{margin:auto 0 8px;padding-top:28px;font-size:1.12rem;font-weight:600;letter-spacing:-.02em}
-    .project p{margin:0;color:var(--soft);font-size:.92rem;line-height:1.55}
-    .project a{margin-top:18px;color:var(--link);font-size:.9rem;white-space:nowrap}
-    .project a:hover{text-decoration:underline}
-    .about{max-width:640px;margin:0;color:#424245;font-size:1.05rem}
-    .scroll-reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
-    .scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
-    .project:nth-child(2){transition-delay:70ms}.project:nth-child(3){transition-delay:140ms}
-    footer{display:flex;justify-content:space-between;gap:20px;padding:22px 0 32px;border-top:1px solid var(--rule);color:var(--soft);font-size:.84rem}
-    footer a{color:var(--link)}
-    @media(max-width:1000px){.hero-art{right:-24px;top:20px;width:240px;opacity:.38}.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:620px){.wrap{width:min(100% - 36px,920px)}header{height:62px}nav{gap:17px;font-size:.82rem}main{padding:76px 0 66px}.hero-art{top:-10px;right:-40px;width:170px;opacity:.28}h1{font-size:clamp(3.1rem,15vw,5rem)}.intro{font-size:1.08rem}.projects{grid-template-columns:1fr}.project{min-height:205px;padding:22px}.project h3{padding-top:18px}footer{flex-direction:column;gap:5px}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fff">
+<title>Munyaradzi Mereki — HIT Computer Science &amp; Python</title>
+<meta name="description" content="Munyaradzi Mereki is a first-year Computer Science student at Harare Institute of Technology (HIT) and a Python developer. See his projects and CS50 coursework.">
+<meta name="author" content="Munyaradzi Mereki"><meta name="robots" content="index, follow"><meta name="google-site-verification" content="JPL418eJ8g0BPI_V09Ilth5LzDoifdlogWLV9IkgYe0"><link rel="canonical" href="https://theboy4l.github.io/"><meta property="og:type" content="website"><meta property="og:title" content="Munyaradzi Mereki — HIT Computer Science &amp; Python"><meta property="og:description" content="A first-year Computer Science student at Harare Institute of Technology, learning through Python and web projects."><meta property="og:url" content="https://theboy4l.github.io/"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Munyaradzi Mereki","url":"https://theboy4l.github.io/","sameAs":["https://github.com/theboy4l"],"jobTitle":"First-year Computer Science Student and Python Developer","affiliation":{"@type":"CollegeOrUniversity","name":"Harare Institute of Technology"},"knowsAbout":["Python","Computer Science","Software Engineering"]}</script>
+<style>
+:root{color-scheme:light;--paper:#fff;--ink:#171717;--muted:#626267;--quiet:#838389;--rule:#e3e3e6;--accent:#0667c9;--content:1050px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}button,input,textarea,select{font:inherit}.wrap{width:min(var(--content),calc(100% - 48px));margin:auto}
+header.site-header{height:auto;position:sticky;top:0;z-index:10;background:#f4f7fa;color:#171717;border-bottom:1px solid #e4e9ef}.header-inner{width:min(var(--content),calc(100% - 48px));min-height:70px;margin:0 auto;display:flex;align-items:center;gap:40px}.brand{flex:0 0 auto;color:#171717;font-size:.98rem;font-weight:600;letter-spacing:-.025em}.nav{display:flex;gap:29px;align-items:center;color:#5f6268;font-size:.9rem}.nav a{transition:color .15s ease}.nav a:hover,.nav a:focus-visible{color:var(--accent)}.header-cta{margin-left:auto;min-height:42px;display:inline-flex;align-items:center;gap:10px;padding:0 19px;border-radius:25px;background:var(--accent);color:#fff;font-size:.88rem;font-weight:600;transition:background .15s ease,transform .15s ease}.header-cta:hover{background:#0055ad;transform:translateY(-1px)}
+.hero{padding:102px 0 86px;max-width:840px}.eyebrow{margin:0 0 22px;color:var(--muted);font-size:.9rem}.hero h1{margin:0;font-size:clamp(3.3rem,8vw,6.5rem);line-height:1;letter-spacing:-.075em;font-weight:600}.hero h2{margin:16px 0 0;color:#77777c;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:450;letter-spacing:-.05em;line-height:1.15}.intro{max-width:560px;margin:23px 0 0;color:#4d4d52;font-size:1.08rem;line-height:1.7}.hero-links{display:flex;gap:24px;margin-top:23px}.link{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-size:.95rem;font-weight:550}.link .arrow{display:inline-block;transition:transform .16s ease}.link:hover .arrow{transform:translate(2px,-2px)}
+section{padding:28px 0 73px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:20px}.section-head h2{margin:0;font-size:1.85rem;line-height:1.2;font-weight:600;letter-spacing:-.05em}.section-head p{margin:0;color:var(--muted);font-size:.92rem}.project-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:stretch}.project-card{grid-column:span 6;overflow:hidden;border:1px solid #e1e1e4;border-radius:20px;background:#fff;transition:border-color .2s ease,box-shadow .2s ease}.project-card:nth-child(3){grid-column:3/span 8}.project-card:hover,.project-card:focus-within{border-color:#b9cde0;box-shadow:0 10px 28px rgba(25,39,58,.075)}
+.project-art{height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#eff4fa}.project-art:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,0) 60%,rgba(255,255,255,.4))}.art-visa{background:#eaf2fb}.terminal{width:min(82%,430px);padding:16px 18px 18px;border:1px solid #c5d3e4;border-radius:11px;background:#fff;box-shadow:0 12px 28px rgba(29,58,94,.11);transform:rotate(-1.5deg);transition:transform .28s ease}.project-card:hover .terminal,.project-card:focus-within .terminal{transform:rotate(0) translateY(-2px)}.terminal-bar{display:flex;gap:5px;padding-bottom:11px;border-bottom:1px solid #e8edf3}.terminal-bar i{width:7px;height:7px;border-radius:50%;background:#cad2dc}.terminal-content{display:grid;grid-template-columns:1fr auto;gap:5px 12px;padding-top:12px;font:12px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace;color:#69737e}.terminal-content strong{color:#252a31;font-weight:600}.terminal-content .ok{color:#16804a}.art-journal{background:#f5f1e8}.journal-page{width:min(72%,330px);min-height:160px;padding:19px 21px;border:1px solid #e7dfd2;border-radius:4px;background:#fffefa;box-shadow:0 12px 27px rgba(71,59,38,.12);transform:rotate(2deg);transition:transform .28s ease}.project-card:hover .journal-page,.project-card:focus-within .journal-page{transform:rotate(0) translateY(-2px)}.journal-title{margin:0 0 13px;color:#33312e;font-size:13px;font-weight:600;letter-spacing:-.01em}.journal-rule{height:1px;margin:9px 0;background:#ece8e1}.journal-label{display:flex;justify-content:space-between;gap:8px;color:#77736d;font-size:10px}.journal-label b{color:#5e6b79;font-weight:500}.journal-line{width:82%;height:4px;margin-top:11px;border-radius:2px;background:#e5e0d8}.journal-line.short{width:57%}.journal-line.mid{width:70%}.art-student{background:#edf3ef}.planner{width:min(84%,450px);display:grid;grid-template-columns:1fr 1.2fr;gap:13px;transform:rotate(-1deg);transition:transform .28s ease}.project-card:hover .planner,.project-card:focus-within .planner{transform:rotate(0) translateY(-2px)}.planner-panel{padding:14px 15px;border:1px solid #d6e1d9;border-radius:8px;background:rgba(255,255,255,.95);box-shadow:0 10px 23px rgba(39,77,55,.08)}.planner-title{margin:0 0 11px;color:#475c4d;font-size:11px;font-weight:600}.planner-row{display:flex;align-items:center;gap:7px;padding:7px 0;border-top:1px solid #edf0ed;color:#606b63;font-size:9px}.planner-row i{width:8px;height:8px;border-radius:2px;background:#a8c5b2}.planner-row:nth-child(3) i{background:#d7c286}.planner-row:nth-child(4) i{background:#a9bdd2}.project-content{padding:19px 20px 18px}.project-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--quiet);font-size:.78rem}.project h3{margin:8px 0 6px;font-size:1.23rem;line-height:1.3;font-weight:600;letter-spacing:-.03em}.project-description{margin:0;color:var(--muted);font-size:.92rem;line-height:1.6}.card-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:15px}.project-details{color:var(--muted);font-size:.85rem}.project-details summary{width:max-content;cursor:pointer;list-style:none;color:var(--accent)}.project-details summary::-webkit-details-marker{display:none}.project-details summary:after{content:" +";font-weight:500}.project-details[open] summary:after{content:" −"}.project-details p{max-width:560px;margin:10px 0 0;color:var(--muted);font-size:.88rem;line-height:1.65}.project-link{white-space:nowrap}.project-card details[open] .project-content{background:#fcfcfd}
+.about-section{display:grid;grid-template-columns:220px minmax(0,630px);gap:38px;padding-top:29px;border-top:1px solid var(--rule)}.about-section h2{margin:0;font-size:1.85rem;line-height:1.2;font-weight:600;letter-spacing:-.05em}.about-copy{margin:0;color:#4d4d52;font-size:1.01rem;line-height:1.8}.about-note{margin:17px 0 0;color:var(--quiet);font-size:.85rem}footer{display:flex;justify-content:space-between;gap:20px;padding:20px 0 30px;border-top:1px solid var(--rule);color:var(--muted);font-size:.84rem}footer a{color:var(--accent)}footer a:hover{text-decoration:underline}
+@media(max-width:780px){.header-inner{gap:24px}.project-card,.project-card:nth-child(3){grid-column:span 6}.project-card:nth-child(3){grid-column:2/span 10}.about-section{grid-template-columns:170px minmax(0,1fr);gap:24px}}
+@media(max-width:560px){.wrap{width:calc(100% - 34px)}.header-inner{width:calc(100% - 24px);min-height:62px;gap:11px}.brand{font-size:.76rem}.nav{gap:10px;font-size:.76rem}.header-cta{min-height:34px;padding:0 10px;font-size:.74rem}.hero{padding:75px 0 63px}.eyebrow{font-size:.82rem}.hero h1{font-size:clamp(3rem,14vw,4.7rem)}.hero h2{margin-top:13px}.intro{font-size:1rem}.hero-links{gap:19px}.section-head{display:block}.section-head p{margin-top:7px}.project-grid{grid-template-columns:1fr;gap:13px}.project-card,.project-card:nth-child(3){grid-column:1}.project-art{height:190px}.project-content{padding:17px}.about-section{grid-template-columns:1fr;gap:13px;padding-top:25px}footer{flex-direction:column;gap:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#top">Munyaradzi Mereki</a>
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="https://github.com/theboy4l">GitHub</a>
-      </nav>
-    </header>
-    <main id="top">
-      <div class="hero-art" aria-hidden="true"></div>
-      <p class="kicker">First-year Computer Science student at Harare Institute of Technology (HIT)</p>
-      <h1>Munyaradzi Mereki<span>Learning by building.</span></h1>
-      <p class="intro">I’m studying computer science at HIT and working through projects in Python and web development. Here are a few things I’ve made along the way.</p>
-      <a class="hero-link" href="#projects">See my projects <span aria-hidden="true">↓</span></a>
-    </main>
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-note">A small selection from my GitHub.</p>
-      <div class="projects">
-        <article class="project"><span class="number">01</span><h3>Visa Day Calculator</h3><p>A tool for tracking visits and counting days in a country over a rolling 365-day period.</p><a href="https://github.com/theboy4l/visa-day-calculator-">View project ↗</a></article>
-        <article class="project"><span class="number">02</span><h3>CS50W Learning Journal</h3><p>Notes and reflections from working through Harvard’s web programming course.</p><a href="https://github.com/theboy4l/cs50w-learning-journal">Read journal ↗</a></article>
-        <article class="project"><span class="number">03</span><h3>CS50P</h3><p>My exercises and projects from Harvard’s Introduction to Programming with Python.</p><a href="https://github.com/theboy4l/CS50P">View coursework ↗</a></article>
-      </div>
-    </section>
-    <section id="about">
-      <h2 class="section-title">About</h2>
-      <p class="about">I’m a first-year Computer Science student at Harare Institute of Technology and a CS50P graduate. I like learning by making small projects, understanding how they work, and improving them as I go.</p>
-    </section>
-    <footer><span>Munyaradzi Mereki · 2026</span><a href="https://github.com/theboy4l">GitHub profile ↗</a></footer>
-  </div>
-  <script>
-    (() => {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
-      const items = document.querySelectorAll('#projects .section-title, #projects .section-note, .project, #about h2, #about .about');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
-      }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
-      items.forEach(item => {
-        item.classList.add('scroll-reveal');
-        observer.observe(item);
-      });
-    })();
-  </script>
-</body>
-</html>
+<body><header class="site-header"><div class="header-inner"><a class="brand" href="#top">Munyaradzi Mereki</a><nav class="nav" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#about">About</a></nav><a class="header-cta" href="https://github.com/theboy4l">GitHub <span aria-hidden="true">↗</span></a></div></header><div class="wrap">
+<main class="hero" id="top"><p class="eyebrow">First-year Computer Science student at Harare Institute of Technology (HIT)</p><h1>Munyaradzi Mereki</h1><h2>Learning by building.</h2><p class="intro">I’m studying computer science at HIT and working through projects in Python and web development. Here are a few things I’ve made along the way.</p><div class="hero-links"><a class="link" href="#projects">See my projects <span class="arrow" aria-hidden="true">↓</span></a><a class="link" href="https://github.com/theboy4l">GitHub profile <span class="arrow" aria-hidden="true">↗</span></a></div></main>
+<section id="projects" aria-labelledby="projects-heading"><div class="section-head"><h2 id="projects-heading">Projects</h2><p>A small selection from my GitHub.</p></div><div class="project-grid">
+<article class="project-card"><div class="project-art art-visa" role="img" aria-label="Illustration of example Visa Day Calculator output"><div class="terminal"><div class="terminal-bar"><i></i><i></i><i></i></div><div class="terminal-content"><span>total days used</span><strong>67</strong><span>days remaining</span><strong>23</strong><span>status</span><strong class="ok">entry allowed</strong></div></div></div><div class="project-content"><div class="project-meta"><span>01 · Python application</span><span>Rolling 365 days</span></div><h3>Visa Day Calculator</h3><p class="project-description">A tool for tracking visits and counting days in a country over a rolling 365-day period.</p><div class="card-actions"><details class="project-details"><summary>How it works</summary><p>It stores visitor records in a CSV file, counts overlapping visits in the rolling window, and reports whether the 90-day stay limit has been reached. The visual above uses the example output in the project README.</p></details><a class="link project-link" href="https://github.com/theboy4l/visa-day-calculator-">View project <span class="arrow" aria-hidden="true">↗</span></a></div></div></article>
+<article class="project-card"><div class="project-art art-journal" role="img" aria-label="Illustration of a learning journal page"><div class="journal-page"><p class="journal-title">CS50W · Learning notes</p><div class="journal-label"><span>Week 0</span><b>concepts</b></div><div class="journal-rule"></div><div class="journal-label"><span>research sources</span><b>notes</b></div><div class="journal-line"></div><div class="journal-line mid"></div><div class="journal-line short"></div></div></div><div class="project-content"><div class="project-meta"><span>02 · Course journal</span><span>CS50W</span></div><h3>CS50W Learning Journal</h3><p class="project-description">Notes and reflections from working through Harvard’s web programming course.</p><div class="card-actions"><details class="project-details"><summary>What’s inside</summary><p>A public record of course concepts, research sources, experiments, and reflections from learning web programming with Python and JavaScript.</p></details><a class="link project-link" href="https://github.com/theboy4l/cs50w-learning-journal">Read journal <span class="arrow" aria-hidden="true">↗</span></a></div></div></article>
+<article class="project-card"><div class="project-art art-student" role="img" aria-label="Illustration of Student Life Manager sections"><div class="planner"><div class="planner-panel"><p class="planner-title">Student Life Manager</p><div class="planner-row"><i></i><span>Tasks</span></div><div class="planner-row"><i></i><span>Timetable</span></div><div class="planner-row"><i></i><span>Budget</span></div></div><div class="planner-panel"><p class="planner-title">Study plan</p><div class="planner-row"><i></i><span>Study sessions</span></div><div class="planner-row"><i></i><span>GPA calculator</span></div><div class="planner-row"><i></i><span>Python · CS50P</span></div></div></div></div><div class="project-content"><div class="project-meta"><span>03 · Python coursework</span><span>CS50P</span></div><h3>CS50P</h3><p class="project-description">My exercises and projects from Harvard’s Introduction to Programming with Python.</p><div class="card-actions"><details class="project-details"><summary>Featured project</summary><p>Student Life Manager is a command-line application from the course, bringing together tasks, timetables, budgeting, study sessions, and GPA calculations.</p></details><a class="link project-link" href="https://github.com/theboy4l/CS50P">View coursework <span class="arrow" aria-hidden="true">↗</span></a></div></div></article>
+</div></section>
+<section class="about-section" id="about" aria-labelledby="about-heading"><h2 id="about-heading">About</h2><div><p class="about-copy">I’m a first-year Computer Science student at Harare Institute of Technology and a CS50P graduate. I like learning by making small projects, understanding how they work, and improving them as I go.</p><p class="about-note">Harare Institute of Technology · Computer Science</p></div></section>
+<footer><span>Munyaradzi Mereki · 2026</span><a href="https://github.com/theboy4l">GitHub profile ↗</a></footer>
+</div></body></html>
